@@ -35,14 +35,6 @@
 - � **Migration System**: Database migration templates with best practices
 - 🌱 **Seed Data**: Development and test data for quick project setup
 
-## 🛠️ Tech Stack
-
-- **Frontend**: React 18, TypeScript, Vite
-- **Database**: PostgreSQL, MySQL, SQLite (templates included)
-- **Code Quality**: ESLint, Prettier, EditorConfig
-- **Documentation**: Comprehensive markdown guides
-- **Community**: GitHub templates, Code of Conduct, Contributing guidelines
-- **License**: GPL-3.0 (open source friendly)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,45 +72,6 @@ Before you begin, ensure you have the following installed:
 - [Database System](docs/DATABASE_SETUP.md) (PostgreSQL, MySQL, or SQLite)
 - [GitHub CLI](https://cli.github.com/) (optional, for Method 2)
 
-### Development Setup (After Using Template)
-
-Once you've created your project from this template:
-
-1. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   ```
-
-2. **Set up database** (see [Database Setup Guide](docs/DATABASE_SETUP.md))
-   ```bash
-   # Choose your database system and run schema files
-   npm run db:setup    # Get setup guidance
-   npm run db:seed:dev # Load development data
-   ```
-
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
-   # Don't forget to add DATABASE_URL and other database settings
-   ```
-
-4. **Start the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. **Open your browser**
-  
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🏗️ Template Structure
 
