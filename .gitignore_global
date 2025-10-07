@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,vim,jetbrains,microsoftoffice,xcode,backup
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode,vim,jetbrains,microsoftoffice,xcode,backup
+# Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,vim,jetbrains,xcode,backup
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode,vim,jetbrains,xcode,backup
 
 ### Backup ###
 *.bak
@@ -7,26 +7,6 @@
 *.ori
 *.orig
 *.tmp
-
-### MicrosoftOffice ###
-
-# Word temporary
-~$*.doc*
-
-# Word Auto Backup File
-Backup of *.doc*
-
-# Excel temporary
-~$*.xls*
-
-# Excel Backup File
-*.xlk
-
-# PowerPoint temporary
-~$*.ppt*
-
-# Visio autosave temporary files
-*.~vsd*
 
 ### Xcode ###
 ## User settings
@@ -231,4 +211,4 @@ tags
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,vim,jetbrains,microsoftoffice,xcode,backup
+# End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,vim,jetbrains,xcode,backup
