@@ -1,3 +1,6 @@
+/* ========================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   ======================================== */
 :root {
   --side-bar-bg-color: var(--base2);
   --text-color: #B3B3D4;
@@ -21,6 +24,12 @@
   --base01: #586e75;
   --base02: #cbcbf0;
   --base03: #F8F8F0;
+  --border-color: #4a4a62;
+  --meta-text-color: #999999;
+  --code-border-color: #586e75;
+  --success-color: #859900;
+  --error-color: #dc322f;
+  --muted-color: #999999;
   --item-hover-bg-color: var(--base2);
   --window-border: 1px solid #93a1a1;
   --active-file-bg-color: var(--red);
@@ -28,18 +37,20 @@
   --item-hover-text-color: #93a1a1;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+/* ========================================
+   FONT IMPORTS
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&family=PT+Sans&display=swap');
 
-
+/* ========================================
+   BASE STYLES
+   ======================================== */
 html {
   font-size: 18px;
 }
 
 body {
   font-family: "PT Sans", "-apple-system", "Liberation Mono", monospace;
-  /*font-family: Geneva, Tahoma, sans-serif;*/
   color: var(--text-color);
   line-height: 2;
   background-color: var(--bg-color);
@@ -67,14 +78,21 @@ body>*:last-child {
   margin-bottom: 0 !important;
 }
 
+/* ========================================
+   LINKS
+   ======================================== */
 a {
   color: var(--blue);
+  transition: color 0.2s ease;
 }
 
 a:hover {
   color: var(--cyan);
 }
 
+/* ========================================
+   TEXT FORMATTING
+   ======================================== */
 em {
   color: var(--orange);
 }
@@ -94,6 +112,9 @@ mark {
   padding: 1px 4px;
 }
 
+/* ========================================
+   HEADINGS
+   ======================================== */
 h1,
 h2,
 h3,
@@ -151,7 +172,6 @@ h3.md-focus:before {
   margin-left: -4ch;
 }
 
-/** override the default style for focused headings */
 h3.md-focus:before {
   color: inherit;
   border: inherit;
@@ -168,6 +188,9 @@ h3.md-focus:before {
   line-height: inherit;
 }
 
+/* ========================================
+   LISTS
+   ======================================== */
 p,
 ul,
 ol,
@@ -192,6 +215,9 @@ hr {
   border-bottom: 1px solid var(--base2);
 }
 
+/* ========================================
+   HEADING RESETS
+   ======================================== */
 body>h2:first-child {
   margin-top: 0;
   padding-top: 0;
@@ -235,6 +261,9 @@ li p.first {
   display: inline-block;
 }
 
+/* ========================================
+   LIST STYLES
+   ======================================== */
 ul,
 ol {
   padding-left: 30px;
@@ -250,6 +279,9 @@ ol:last-child {
   margin-bottom: 0;
 }
 
+/* ========================================
+   BLOCKQUOTES
+   ======================================== */
 blockquote {
   background-color: var(--base3);
   border-radius: 5px;
@@ -260,7 +292,6 @@ blockquote {
 h4,
 h5,
 h6 {
-  /* display:  none; */
   color: var(--red);
   font-size: 1rem;
 }
@@ -308,13 +339,16 @@ blockquote blockquote {
   padding-right: 0;
 }
 
+/* ========================================
+   TABLES
+   ======================================== */
 table {
   padding: 0;
   word-break: initial;
 }
 
 table tr {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid var(--border-color);
   margin: 0;
   padding: 0;
 }
@@ -325,14 +359,14 @@ table tr:nth-child(2n) {
 
 table tr th {
   font-weight: bold;
-  border: 1px solid #cccccc;
+  border: 1px solid var(--border-color);
   text-align: left;
   margin: 0;
   padding: 6px 13px;
 }
 
 table tr td {
-  border: 1px solid #cccccc;
+  border: 1px solid var(--border-color);
   text-align: left;
   margin: 0;
   padding: 6px 13px;
@@ -348,6 +382,9 @@ table tr td:last-child {
   margin-bottom: 0;
 }
 
+/* ========================================
+   CODE BLOCKS
+   ======================================== */
 .CodeMirror-gutters {
   border-right: 0px;
 }
@@ -379,6 +416,9 @@ tt {
   padding: 15px;
 }
 
+/* ========================================
+   TASK LISTS
+   ======================================== */
 .task-list {
   padding-left: 0;
 }
@@ -392,13 +432,9 @@ tt {
   left: -4px;
 }
 
-@media screen and (min-width: 914px) {
-  /*body {
-        width: 854px;
-        margin: 0 auto;
-    }*/
-}
-
+/* ========================================
+   RESPONSIVE & PRINT STYLES
+   ======================================== */
 @media print {
   html {
     font-size: 13px;
@@ -414,6 +450,9 @@ tt {
   }
 }
 
+/* ========================================
+   CODE FENCE OVERRIDES
+   ======================================== */
 .md-fences {
   background-color: var(--base2);
   color: var(--text-color);
@@ -426,7 +465,7 @@ tt {
   background-color: #f7f7f7;
   border: 0;
   border-radius: 3px;
-  color: #777777;
+  color: var(--meta-text-color);
   margin-top: 0 !important;
 }
 
@@ -434,14 +473,16 @@ tt {
   bottom: .375rem;
 }
 
-
+/* ========================================
+   IMAGE & MEDIA
+   ======================================== */
 .md-image>.md-meta {
   border-radius: 3px;
   font-family: "Roboto Mono", "Liberation Mono", Courier, monospace;
   padding: 8px 16px;
   font-size: 0.9em;
   color: inherit;
-  /* background-color: */
+  background-color: var(--base3);
 }
 
 .md-tag {
@@ -453,6 +494,9 @@ tt {
   padding-bottom: 10px;
 }
 
+/* ========================================
+   UI ELEMENTS
+   ======================================== */
 .sidebar-tabs {
   border-bottom: none;
 }
@@ -472,12 +516,18 @@ tt {
   top: 10px;
 }
 
+/* ========================================
+   FOCUS MODE
+   ======================================== */
 /** focus mode */
 
 .on-focus-mode blockquote {
   border-left-color: rgba(85, 85, 85, 0.12);
 }
 
+/* ========================================
+   FILE TREE & SIDEBAR
+   ======================================== */
 header,
 .context-menu,
 .megamenu-content,
@@ -488,22 +538,20 @@ footer {
 .file-node-content:hover .file-node-icon,
 .file-node-content:hover .file-node-open-state {
   visibility: visible;
+  transition: visibility 0.2s ease;
 }
 
 .task-list-done {
-  /* styles for completed tasks */
   text-decoration: line-through;
-}
-
-.task-list-not-done {
-  /* styles for incomplete tasks */
 }
 
 .mac-seamless-mode #typora-sidebar {
   background-color: var(--side-bar-bg-color);
 }
 
-/* code mirror theme */
+/* ========================================
+   CODE MIRROR SYNTAX HIGHLIGHTING THEME
+   ======================================== */
 .cm-s-inner .cm-header {
   color: var(--blue);
 }
@@ -563,7 +611,7 @@ footer {
 }
 
 .cm-s-inner .cm-meta {
-  color: #859900;
+  color: var(--success-color);
 }
 
 .cm-s-inner .cm-qualifier {
@@ -579,11 +627,11 @@ footer {
 }
 
 .cm-s-inner .CodeMirror-matchingbracket {
-  color: #859900;
+  color: var(--success-color);
 }
 
 .cm-s-inner .CodeMirror-nonmatchingbracket {
-  color: #dc322f;
+  color: var(--error-color);
 }
 
 .cm-s-inner .cm-tag {
